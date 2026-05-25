@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RepuestosPro - Repuestos para Camiones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar">
+    <div class="nav-logo">
+      🚛 RepuestosPro
+    </div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="nav-btn" onclick="scrollToSection('contacto')">Cotizar ahora</button>
+    <button class="hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio" onclick="closeMobile()">Inicio</a>
+    <a href="#productos" onclick="closeMobile()">Productos</a>
+    <a href="#marcas" onclick="closeMobile()">Marcas</a>
+    <a href="#faq" onclick="closeMobile()">Preguntas</a>
+    <a href="#contacto" onclick="closeMobile()">Contacto</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Repuestos de camiones de <span class="highlight">alta calidad</span></h1>
+      <p>Encuentra las piezas que necesitas para mantener tu flota en marcha. Envío rápido, garantía de calidad y atención especializada.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToSection('productos')">Ver catálogo</button>
+        <button class="btn-secondary" onclick="scrollToSection('contacto')">Contáctanos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="section" id="productos">
+    <h2 class="section-title">Nuestros productos</h2>
+    <p class="section-sub">Repuestos originales y alternativos para todo tipo de camiones</p>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-icon">⚙️</div>
+        <h3>Motor y partes</h3>
+        <p>Pistones, filtros, juntas y componentes de motor</p>
+        <div class="product-price">Desde $45.000</div>
+        <button class="card-btn">Ver más</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔧</div>
+        <h3>Transmisión</h3>
+        <p>Cajas de cambio, embragues y diferenciales</p>
+        <div class="product-price">Desde $120.000</div>
+        <button class="card-btn">Ver más</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🛞</div>
+        <h3>Frenos y suspensión</h3>
+        <p>Pastillas, discos, muelles y amortiguadores</p>
+        <div class="product-price">Desde $30.000</div>
+        <button class="card-btn">Ver más</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">⚡</div>
+        <h3>Sistema eléctrico</h3>
+        <p>Alternadores, baterías, fusibles y cableado</p>
+        <div class="product-price">Desde $25.000</div>
+        <button class="card-btn">Ver más</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <div class="brands" id="marcas">
+    <p>Marcas con las que trabajamos</p>
+    <div class="brand-tags">
+      <span class="brand-tag">Volvo</span>
+      <span class="brand-tag">Mercedes-Benz</span>
+      <span class="brand-tag">Scania</span>
+      <span class="brand-tag">Kenworth</span>
+      <span class="brand-tag">Freightliner</span>
+      <span class="brand-tag">Mack</span>
+      <span class="brand-tag">International</span>
+    </div>
+  </div>
+
+  <!-- FAQ DESPLEGABLE -->
+  <section class="faq-section" id="faq">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <p class="section-sub">Todo lo que necesitas saber antes de comprar</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-header" onclick="toggleFaq(this)">
+          ¿Hacen envíos a todo el país?
+          <span class="faq-icon">&#8964;</span>
+        </button>
+        <div class="faq-body">
+          Sí, realizamos envíos a todo el territorio nacional. El tiempo de entrega es de 1 a 3 días hábiles. Los pedidos superiores a $200.000 tienen envío gratis.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" onclick="toggleFaq(this)">
+          ¿Los repuestos tienen garantía?
+          <span class="faq-icon">&#8964;</span>
+        </button>
+        <div class="faq-body">
+          Todos nuestros repuestos cuentan con garantía mínima de 6 meses. Los repuestos originales pueden tener garantía extendida de hasta 12 meses.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" onclick="toggleFaq(this)">
+          ¿Puedo solicitar una cotización?
+          <span class="faq-icon">&#8964;</span>
+        </button>
+        <div class="faq-body">
+          Puedes enviarnos el modelo de tu camión, el año y la pieza que necesitas a través del formulario de contacto. Te respondemos en menos de 2 horas en horario laboral.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header" onclick="toggleFaq(this)">
+          ¿Trabajan con repuestos originales y alternativos?
+          <span class="faq-icon">&#8964;</span>
+        </button>
+        <div class="faq-body">
+          Sí, contamos con ambas opciones. Los repuestos originales son directamente de fábrica. Los alternativos son de marcas certificadas con la misma calidad a un precio más accesible.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact-section" id="contacto">
+    <h2 class="section-title">Contáctanos</h2>
+    <p class="section-sub">Completa el formulario y te respondemos pronto</p>
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <input type="text" placeholder="Modelo del camión" />
+      <textarea placeholder="¿Qué repuesto necesitas?" rows="4" required></textarea>
+      <button type="submit" class="btn-primary">Enviar mensaje</button>
+    </form>
+    <p class="form-msg" id="formMsg"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <span class="footer-brand">RepuestosPro</span> · Todos los derechos reservados · Bogotá, Colombia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
