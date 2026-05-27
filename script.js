@@ -38,16 +38,47 @@ function toggleFaq(btn) {
   }
 }
 
+
+// ===========================
+// Inicializar EmailJS
+
+(function () {
+  emailjs.init({
+    publicKey: "piNITCCy_rU9hjGqY",
+  });
+})();
+
 // ===========================
 // FORMULARIO DE CONTACTO
 // ===========================
+
 function submitForm(e) {
   e.preventDefault();
+
+  const form = e.target;
   const msg = document.getElementById('formMsg');
-  msg.textContent = '✅ ¡Mensaje enviado! Te contactaremos pronto.';
-  e.target.reset();
-  setTimeout(() => { msg.textContent = ''; }, 5000);
+
+  emailjs.sendForm(
+    'service_1um6z3c',
+    'template_ffoorlc',
+    form
+  )
+  .then(() => {
+    msg.textContent = '✅ ¡Mensaje enviado correctamente!';
+    form.reset();
+
+    setTimeout(() => {
+      msg.textContent = '';
+    }, 5000);
+  })
+  .catch((error) => {
+    msg.textContent = '❌ Error al enviar el mensaje';
+    console.error(error);
+  });
 }
+
+
+
 
 // ===========================
 // ANIMACIÓN AL HACER SCROLL

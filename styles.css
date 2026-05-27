@@ -21,8 +21,21 @@ body {
 /* ===========================
    NAVBAR / HEADER
 =========================== */
+
+.nav-logo-container img {
+  height: 50px;
+  width: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .navbar {
-  background: #1a2744;
+  background: #414040;
   padding: 0 2rem;
   height: 64px;
   display: flex;
@@ -35,7 +48,7 @@ body {
 }
 
 .nav-logo {
-  color: #fff;
+  color: #fec20c;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -55,11 +68,11 @@ body {
 }
 
 .nav-links a:hover {
-  color: #e07b30;
+  color: #fec20c;
 }
 
 .nav-btn {
-  background: #e07b30;
+  background: #fec20c;
   color: #fff;
   border: none;
   padding: 9px 20px;
@@ -101,7 +114,7 @@ body {
 }
 
 .mobile-menu a:hover {
-  color: #e07b30;
+  color: #fec20c;
 }
 
 .mobile-menu.open {
@@ -112,7 +125,7 @@ body {
    HERO
 =========================== */
 .hero {
-  background: linear-gradient(135deg, #1a2744 55%, #2a3f6f 100%);
+  background: linear-gradient(135deg, #030303 55%, #fec20c 100%);
   color: #fff;
   padding: 5rem 2rem;
   text-align: center;
@@ -131,7 +144,7 @@ body {
 }
 
 .highlight {
-  color: #e07b30;
+  color: #fec20c;
 }
 
 .hero p {
@@ -151,7 +164,7 @@ body {
    BOTONES GLOBALES
 =========================== */
 .btn-primary {
-  background: #e07b30;
+  background: #fec20c;
   color: #fff;
   border: none;
   padding: 13px 30px;
@@ -252,7 +265,7 @@ body {
 .product-price {
   font-size: 16px;
   font-weight: 700;
-  color: #e07b30;
+  color: #fec20c;
   margin-bottom: 12px;
 }
 
@@ -268,7 +281,7 @@ body {
 }
 
 .card-btn:hover {
-  background: #e07b30;
+  background: #fec20c;
 }
 
 /* ===========================
@@ -362,7 +375,7 @@ body {
 
 .faq-icon {
   font-size: 22px;
-  color: #e07b30;
+  color: #fec20c;
   transition: transform 0.35s;
   line-height: 1;
 }
@@ -418,7 +431,7 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #e07b30;
+  border-color: #fec20c;
   background: #fff;
 }
 
@@ -447,7 +460,7 @@ footer {
 }
 
 .footer-brand {
-  color: #e07b30;
+  color: #fec20c;
   font-weight: 700;
 }
 

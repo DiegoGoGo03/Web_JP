@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RepuestosPro - Repuestos para Camiones</title>
+  <title>RepuestosPro JP</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- HEADER / NAVBAR -->
+  <!-- Esto es la barra de navegación -->
   <header class="navbar">
+    <div class="nav-logo-container">
+      <img src="scr/images/LOGO_EMPRESA.jpg"/>
+    </div>
     <div class="nav-logo">
-      🚛 RepuestosPro
+      🚛 Repuestos J&J
     </div>
     <nav class="nav-links">
       <a href="#inicio">Inicio</a>
@@ -155,11 +159,17 @@
     <h2 class="section-title">Contáctanos</h2>
     <p class="section-sub">Completa el formulario y te respondemos pronto</p>
     <form class="contact-form" onsubmit="submitForm(event)">
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo electrónico" required />
-      <input type="text" placeholder="Modelo del camión" />
-      <textarea placeholder="¿Qué repuesto necesitas?" rows="4" required></textarea>
-      <button type="submit" class="btn-primary">Enviar mensaje</button>
+      <input type="text" name="name" placeholder="Tu nombre" required />
+
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+
+      <input type="text" name="truck" placeholder="Modelo del camión" />
+
+      <textarea name="message" placeholder="¿Qué repuesto necesitas?" rows="4" required></textarea>
+
+      <button type="submit" class="btn-primary">
+        Enviar mensaje
+      </button>
     </form>
     <p class="form-msg" id="formMsg"></p>
   </section>
@@ -169,6 +179,9 @@
     <p>© 2025 <span class="footer-brand">RepuestosPro</span> · Todos los derechos reservados · Bogotá, Colombia</p>
   </footer>
 
+  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
+  
 </body>
 </html>
